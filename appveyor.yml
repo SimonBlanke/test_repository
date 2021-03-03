@@ -1,0 +1,19 @@
+# appveyor.yml
+---
+environment:
+  matrix:
+  - TOXENV: py27
+  - TOXENV: py35
+  - TOXENV: py36
+  - TOXENV: py37
+
+build: off
+
+install:
+  - pip install packaging
+  - pip install pytest
+  - pip install pytest-cov
+  - pip install coveralls
+
+test_script:
+  - pytest --cov=gradient_free_optimizers/ -p no:warnings
