@@ -1,4 +1,4 @@
-from test_repository import add_
+from python_test_dir import add_
 
 
 def test_stuff1():
