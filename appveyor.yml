@@ -3,6 +3,7 @@
 environment:
   matrix:
     - image: Ubuntu
+    PYTHON: "3.6"
 
 build: off
 
