@@ -4,7 +4,11 @@ environment:
   matrix:
     # Ubuntu - python 3
     - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
+      PYTHON: "3.5"
+    - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
       PYTHON: "3.6"
+    - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
+      PYTHON: "3.7"
 stack: python %PYTHON%
 
 build: off
@@ -18,4 +22,4 @@ install:
   - pip install .
 
 test_script:
-  - pytest --cov=gradient_free_optimizers/ -p no:warnings
+  - pytest --cov=python_test_dir/ -p no:warnings
