@@ -7,6 +7,7 @@ environment:
 build: off
 
 install:
+  - python -m pip install --upgrade pip
   - pip install packaging
   - pip install pytest
   - pip install pytest-cov
