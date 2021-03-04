@@ -23,3 +23,6 @@ install:
 
 test_script:
   - pytest --cov=python_test_dir/ -p no:warnings
+  
+after_test:
+  - coveralls
