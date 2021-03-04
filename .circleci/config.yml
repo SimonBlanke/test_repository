@@ -20,7 +20,7 @@ jobs:
             pip install coveralls
             pip install .
           
-            - pytest --cov=python_test_dir/ -p no:warnings
+            pytest --cov=python_test_dir/ -p no:warnings
           name: Test
 
 workflows:
