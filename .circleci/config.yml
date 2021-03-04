@@ -12,7 +12,15 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: ./manage.py test
+          command: 
+            - python -m pip install --upgrade pip
+            - pip install packaging
+            - pip install pytest
+            - pip install pytest-cov
+            - pip install coveralls
+            - pip install .
+          
+            - pytest --cov=python_test_dir/ -p no:warnings
           name: Test
 
 workflows:
